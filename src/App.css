@@ -1,0 +1,171 @@
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  height: 95vh; 
+  margin: 2vh auto;
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff, #f0f8ff);
+  padding: 3vh;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+h1 {
+  font-size: 2.5vw;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 2vh;
+}
+
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+  margin-bottom: 1vh;
+  flex-wrap: wrap;
+}
+
+.search-container input {
+  padding: 1.2vh;
+  width: 50%;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  font-size: 1vw;
+  transition: 0.3s;
+}
+
+.search-container input:focus {
+  border-color: #ff6b81;
+  outline: none;
+}
+
+.new-profile-btn {
+  background: #007bff;
+  color: white;
+  padding: 1.2vh 1.5vw;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1vw;
+  transition: background 0.3s;
+}
+
+.new-profile-btn:hover {
+  background: #0056b3;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2vw;
+  width: 100%;
+  flex-grow: 1; 
+  overflow: hidden;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 2vh;
+  border-radius: 10px;
+  text-align: center;
+  background: white;
+  position: relative;
+  transition: 0.3s;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 20vh; 
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.profile-pic {
+  width: 8vh;
+  height: 8vh;
+  font-size: 2.5vh;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.card:hover .profile-pic {
+  background: #007bff;
+  color: white;
+}
+.menu {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.menu:hover {
+  color: #ff6b81;
+}
+
+.menu-options {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 3vh;
+  }
+
+  h1 {
+    font-size: 4vw;
+  }
+
+  .search-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-container input {
+    width: 90%;
+    font-size: 3vw;
+  }
+
+  .new-profile-btn {
+    font-size: 3vw;
+    padding: 2vh 3vw;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .card {
+    padding: 2vh;
+  }
+}

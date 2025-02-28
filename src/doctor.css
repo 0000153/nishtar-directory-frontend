@@ -1,0 +1,170 @@
+
+.doctor-details {
+  width: 90%;
+  max-width: 800px;
+  margin: 5vh auto;
+  background: linear-gradient(135deg, #ffffff, #f0f8ff);
+  padding: 4vh;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(0, 123, 255, 0.2); 
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.doctor-details:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+.doctor-image {
+  width: 12vh;
+  height: 12vh;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2vh;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.doctor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.doctor-details:hover .doctor-image {
+  transform: scale(1.05);
+}
+
+.doctor-details h1 {
+  font-size: 2.5vw;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 1vh;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.doctor-details p {
+  font-size: 1.2vw;
+  color: #444;
+  margin: 1vh 0;
+  max-width: 90%;
+  line-height: 1.5;
+}
+
+.doctor-details strong {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.specialization {
+  background: #007bff;
+  color: white;
+  padding: 0.8vh 1.5vw;
+  font-size: 1vw;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 2vh;
+  transition: background 0.3s;
+}
+
+.doctor-details:hover .specialization {
+  background: #0056b3;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+  margin-top: 2vh;
+}
+
+.contact-info a {
+  text-decoration: none;
+  font-size: 1vw;
+  color: #007bff;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+  color: #ff6b81;
+}
+
+.doctor-details .back-button {
+  background: #007bff;
+  color: white;
+  padding: 1.2vh 1.5vw;
+  font-size: 1vw;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 3vh;
+  transition: background 0.3s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.doctor-details .back-button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 768px) {
+  .doctor-details {
+    width: 95%;
+    padding: 5vh;
+  }
+
+  .doctor-image {
+    width: 10vh;
+    height: 10vh;
+  }
+
+  .doctor-details h1 {
+    font-size: 4vw;
+  }
+
+  .doctor-details p,
+  .contact-info a {
+    font-size: 3vw;
+  }
+
+  .specialization {
+    font-size: 2.5vw;
+    padding: 1vh 2vw;
+  }
+
+  .doctor-details .back-button {
+    font-size: 3vw;
+    padding: 2vh 3vw;
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
